@@ -1,0 +1,58 @@
+[
+  {
+     "image":"https://i.ibb.co/rvbnYBP/1-1.jpg",
+     "about":"Qui veniam laboris do labore deserunt occaecat esse adipisicing. Anim non consectetur reprehenderit officia ex velit sint dolor veniam. Duis veniam magna magna eiusmod commodo occaecat do. Minim velit anim exercitation aute mollit duis eu amet laboris pariatur.\r\n",
+     "name":"Ellison Adams",
+     "id":0,
+     "rating":4
+  },
+  {
+     "image":"https://i.ibb.co/TBB4LHN/6.jpg",
+     "about":"Labore nisi qui excepteur irure magna irure duis. Adipisicing laboris ullamco elit aliquip. Magna culpa aliqua laboris in commodo sit quis ad incididunt ipsum nulla pariatur velit irure. Sint culpa excepteur minim et labore anim minim nisi esse reprehenderit cupidatat dolor. Cillum minim magna consequat veniam velit. Ad deserunt enim mollit enim ullamco ut ut sit mollit anim ad fugiat amet.\r\n",
+     "name":"Wynn Pace",
+     "id":1,
+     "rating":4
+  },
+  {
+     "image":"https://i.ibb.co/5Mfcjwv/5.jpg",
+     "about":"Veniam excepteur cupidatat est ad esse quis. Exercitation labore in nisi proident elit et proident exercitation. Ex pariatur laborum tempor veniam officia irure fugiat anim anim proident. Pariatur proident culpa deserunt fugiat anim id ut dolore do dolore cupidatat reprehenderit duis velit. Non duis laboris do veniam.\r\n",
+     "name":"Callie Byers",
+     "id":2,
+     "rating":4
+  },
+  {
+     "image":"https://i.ibb.co/jbCzxzT/about.jpg",
+     "about":"Cillum occaecat officia est officia sit in ullamco incididunt sunt ea. Commodo cupidatat quis nulla dolor dolore do quis. Nulla quis consectetur magna dolor nostrud. Sint veniam consectetur ullamco adipisicing nostrud duis nostrud et qui do aute duis. Voluptate id laboris pariatur ut duis deserunt aliquip anim veniam.\r\n",
+     "name":"Hurley Davenport",
+     "id":3,
+     "rating":4
+  },
+  {
+     "image":"https://i.ibb.co/N6yCqYC/4.jpg",
+     "about":"Ullamco elit elit voluptate culpa et labore cupidatat ullamco. Labore est ipsum et velit consectetur nulla eiusmod eu fugiat magna. Cillum sint deserunt ipsum ut fugiat officia eu ipsum. Nisi exercitation officia ad in minim pariatur deserunt. Aliqua mollit voluptate fugiat occaecat.\r\n",
+     "name":"Rachelle Martinez",
+     "id":4,
+     "rating":4
+  },
+  {
+     "image":"https://i.ibb.co/D7vG3B8/3.jpg",
+     "about":"Fugiat esse culpa pariatur excepteur cillum dolor excepteur ad ex ipsum. Aute laborum labore ad aute tempor qui aliqua commodo nulla. Laboris eu elit mollit minim exercitation incididunt eu deserunt duis fugiat reprehenderit laborum.\r\n",
+     "name":"Richardson Joyce",
+     "id":5,
+     "rating":3
+  },
+  {
+     "image":"https://i.ibb.co/VxmSD3W/1-4.jpg",
+     "about":"Aute reprehenderit culpa duis Lorem excepteur in. Laborum sunt velit nulla eiusmod deserunt nostrud in minim sit duis commodo aliquip aute nisi. Consectetur voluptate reprehenderit et excepteur. Id voluptate et exercitation nisi proident sit pariatur aliqua.\r\n",
+     "name":"Dena Logan",
+     "id":6,
+     "rating":5
+  },
+  {
+     "image":"https://i.ibb.co/kyxX3J4/1.jpg",
+     "about":"Nostrud anim veniam incididunt dolor cillum ad consectetur irure ipsum elit eu enim pariatur quis. Lorem Lorem velit dolore ipsum consectetur ea pariatur reprehenderit. Ad veniam fugiat reprehenderit aliqua enim non. Laborum aliqua consequat exercitation eu nulla minim sunt. Anim aute duis do reprehenderit esse est laborum officia laboris elit aliquip. Et duis consequat proident eu laborum et in ea velit dolor excepteur quis ex excepteur. Aute irure exercitation nostrud qui aliqua do ad sint enim excepteur ad duis.\r\n",
+     "name":"Josefina Wright",
+     "id":7,
+     "rating":3
+  }
+]

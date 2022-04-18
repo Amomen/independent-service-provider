@@ -1,0 +1,16 @@
+/* .aboutSction-info{
+    padding: 15%;
+} */
+
+.about-heading-1 {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  line-height: 1.5em !important;
+  color: #0071dc !important;
+}
+.about-heading-2 {
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  line-height: 1.3em !important;
+  color: #252525 !important;
+}

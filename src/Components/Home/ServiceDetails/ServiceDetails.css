@@ -1,0 +1,18 @@
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+.service-normal-heading {
+  color: #0071dc;
+  font-weight: 600;
+}
+.service-normal-heading:hover {
+  color: #ffc221;
+}
+.service-normal-heading-2 {
+  color: #252525;
+  font-weight: 600;
+  font-size: 20px;
+}
+.service-normal-heading-2:hover {
+  color: #0071dc;
+}

@@ -23,6 +23,9 @@ const Header = () => {
               <Nav.Link as={Link} to="/" href="">
                 Home
               </Nav.Link>
+              <Nav.Link as={Link} to="/about" href="">
+                About
+              </Nav.Link>
               <Nav.Link as={Link} to="/blogs" href="">
                 Blogs
               </Nav.Link>

@@ -48,10 +48,10 @@ const SocialLogin = () => {
     <div>
       {errorElemt}
       
-      <button className="btn w-50 " onClick={handleSubmitGoogle}>
+      <button className="btn  bg-info w-100" onClick={handleSubmitGoogle}>
         <div className="flex bg-logo items-center justify-center">
           
-          <span className="block text-icon ml-4">Google</span>
+          <span  className="block text-icon ml-4  text-white">Google</span>
         </div>
       </button>
     </div>

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import {
-  useCreateUserWithEmailAndPassword,
-  useSignInWithGoogle,
-} from "react-firebase-hooks/auth";
+import { Button, Form } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-const Signup = () => {
+import SocialLogin from "../SocialLogin/SocialLogin";
+
+
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -36,100 +38,78 @@ const Signup = () => {
     event.preventDefault();
     createUserWithEmailAndPassword(email, password);
   };
-  const location = useLocation();
-  let from = location.state?.from?.pathname;
-  if (user || googleUser) {
-    navigate(from, { replace: true });
+  if (user) {
+    navigate("/");
   }
   const handleForgotPassword = (event) => {};
-  const [signInWithGoogle, googleUser, Loading, errors] =
-    useSignInWithGoogle(auth);
-  /*  const [email, setEmail] = useState("");
-  const [password, setPassWord] = useState("");
-  const [confirmPass, setConfirmPass] = useState("");
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
-  const [createUserWithEmailAndPassword, user] =
-    useCreateUserWithEmailAndPassword(auth); 
-  const EmailBlur = (event) => {
-    setEmail(event.target.value);
-  };
-  const passBlur = (event) => {
-    setPassWord(event.target.value);
-  };
-  const confirmPassBlur = (event) => {
-    setConfirmPass(event.target.value);
-  };
-  if (user) {
-    navigate("/home");
-  }
-
-  const createUser = (event) => {
-    event.preventDefault();
-    if (password !== confirmPass) {
-      setError("your passwords doesn't match");
-      return;
-    }
-    if (password.length > 6) {
-      setError("Password must be 6 charecters or longer");
-      return;
-    }
-    createUserWithEmailAndPassword(email, password);
-  }; */
-
   return (
-    <div className="form-container">
-      <div>
-        <h2 className="form-title"> Sign Up </h2>
-        <form onSubmit={handleSignUp}>
-          <div className="input-group">
-            <label htmlFor="email"></label>
-            <input
-              placeholder="Email"
-              onBlur={handleEmail}
-              type="email"
-              name="email"
-            />
+    <section className="py-48">
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <div className="w-50 mx-auto">
+              <h2 className="text-center py-3">Register</h2>
+              <Form onSubmit={handleSignUp}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    className="w-100 input-filled"
+                    onBlur={handleEmail}
+                    type="email"
+                    placeholder="Enter email"
+                    required
+                    name="email"
+                  />
+                </Form.Group>
+
+                <Form.Group className="mb-3 " controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    className="w-100 input-filled"
+                    onBlur={handlePassword}
+                    type="password"
+                    placeholder="Password"
+                    required
+                    name="password"
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3 " controlId="formBasicPassword">
+                  <Form.Label>Confirm Password</Form.Label>
+                  <Form.Control
+                    name="confirm-password"
+                    className="w-100 input-filled"
+                    onBlur={handleConfirmPassword}
+                    type="password"
+                    placeholder="Confirm Password"
+                    required
+                  />
+                </Form.Group>
+                <div>
+                  <button className="link-btn py-2 w-6/12 ">
+                    Already have an account ?{" "}
+                    <Link to="/Login" className="font-semibold text-indigo-700">
+                      Log in
+                    </Link>
+                  </button>
+                </div>
+                <Button
+                  className="mx-auto my-4 d-block w-75 service-btn btn"
+                  // onBlur={handleSubmit}
+                  variant="primary"
+                  type="submit"
+                >
+                  Sign Up
+                </Button>
+              </Form>
+              
+              <p className="py-3 text-center">{errorElement}</p>
+              <SocialLogin />
+            </div>
           </div>
-          <div className="input-group">
-            <label onBlur={handleEmail} htmlFor="pass"></label>
-            <input
-              placeholder="password"
-              onBlur={handlePassword}
-              type="password"
-              required
-              name="pass"
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="pass"></label>
-            <input
-              placeholder="confirm password"
-              onBlur={handleConfirmPassword}
-              type="password"
-              required
-              name="pass"
-            />
-          </div>
-          <button type="submit" value="Sign Up" className="form-submit">
-            Sign Up
-          </button>
-        </form>
-        <p>
-          Already have an account ?{" "}
-          <Link to="/login" className="form-link">
-            Log in
-          </Link>
-        </p>
-        <button
-          onClick={() => signInWithGoogle()}
-          className="btn btn-primary w-50 d-block mx-auto my-2"
-        >
-          sign in with google
-        </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Signup;
+export default Register;

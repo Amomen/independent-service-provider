@@ -117,11 +117,7 @@ if (error) {
                 </Button>
               </Form>
               <p className="py-3 text-center">{errorElement}</p>
-              <div className="flex items-center w-full py-5">
-                <div className="divider"></div>
-                <p className="text">Or Log-in-with</p>
-                <div className="divider"></div>
-              </div>
+              
               <SocialLogin />
               <ToastContainer />
             </div>

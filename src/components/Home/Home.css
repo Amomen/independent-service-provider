@@ -1,0 +1,9 @@
+.places{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+.main-bg{
+    width: 100%;
+}

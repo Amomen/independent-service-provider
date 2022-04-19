@@ -1,4 +1,12 @@
 .product-image img {
   height: 286px;
   width: 286px;
+  align-items: center;
+  justify-content: center;
+}
+.button{
+    margin-left: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: skyblue;
 }

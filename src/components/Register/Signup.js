@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -33,11 +36,15 @@ const Signup = () => {
     event.preventDefault();
     createUserWithEmailAndPassword(email, password);
   };
-  if (user) {
-    navigate("/");
+  const location = useLocation();
+  let from = location.state?.from?.pathname;
+  if (user || googleUser) {
+    navigate(from, { replace: true });
   }
   const handleForgotPassword = (event) => {};
- /*  const [email, setEmail] = useState("");
+  const [signInWithGoogle, googleUser, Loading, errors] =
+    useSignInWithGoogle(auth);
+  /*  const [email, setEmail] = useState("");
   const [password, setPassWord] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [error, setError] = useState("");
@@ -74,18 +81,30 @@ const Signup = () => {
     <div className="form-container">
       <div>
         <h2 className="form-title"> Sign Up </h2>
-        <form onSubmit={handleSignUp} >
+        <form onSubmit={handleSignUp}>
           <div className="input-group">
-            <label htmlFor="email" ></label>
-            <input placeholder="Email" onBlur={handleEmail} type="email" name="email" />
+            <label htmlFor="email"></label>
+            <input
+              placeholder="Email"
+              onBlur={handleEmail}
+              type="email"
+              name="email"
+            />
           </div>
           <div className="input-group">
-            <label  onBlur={handleEmail} htmlFor="pass" ></label>
-            <input placeholder="password" onBlur={handlePassword} type="password" required name="pass" />
+            <label onBlur={handleEmail} htmlFor="pass"></label>
+            <input
+              placeholder="password"
+              onBlur={handlePassword}
+              type="password"
+              required
+              name="pass"
+            />
           </div>
           <div className="input-group">
-            <label htmlFor="pass" ></label>
-            <input placeholder="confirm password"
+            <label htmlFor="pass"></label>
+            <input
+              placeholder="confirm password"
               onBlur={handleConfirmPassword}
               type="password"
               required
@@ -102,6 +121,12 @@ const Signup = () => {
             Log in
           </Link>
         </p>
+        <button
+          onClick={() => signInWithGoogle()}
+          className="btn btn-primary w-50 d-block mx-auto my-2"
+        >
+          sign in with google
+        </button>
       </div>
     </div>
   );

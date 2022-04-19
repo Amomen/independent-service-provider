@@ -1,3 +1,9 @@
 .footer{
-    
+    background-color: #313041;
+    color: aliceblue;
+    margin-top: 100px;
+    padding: 50px;
+}
+.misc ,.explore , .news{
+    color: tomato;
 }

@@ -1,9 +1,12 @@
 import React from 'react';
+import Cards from '../Card/Cards';
+import Home from '../Home/Home';
+import Places from '../Places/Places';
 
 const Tours = () => {
     return (
         <div>
-            <h2>Tours</h2>
+            <Places></Places>
         </div>
     );
 };
